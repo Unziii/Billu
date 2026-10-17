@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Afii 🎂💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    color:#5c3b45;
+
+    background:
+    radial-gradient(circle at 8% 10%,#ffe5ee,transparent 28%),
+    radial-gradient(circle at 92% 12%,#fff0c9,transparent 25%),
+    linear-gradient(135deg,#fffafa,#fff1f6 55%,#fffaf1);
+
+    overflow-x:hidden;
+}
+
+body:before,
+body:after{
+    content:"";
+    position:fixed;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:#ffdce8;
+    filter:blur(55px);
+    opacity:.35;
+    z-index:-1;
+}
+
+body:before{
+    top:20%;
+    left:-70px;
+}
+
+body:after{
+    bottom:10%;
+    right:-70px;
+}
+
+button{
+    font:inherit;
+}
+
+section{
+    width:min(1120px,92%);
+    margin:auto;
+    padding:80px 0;
+}
+
+h1,
+h2,
+.script{
+    font-family:"DM Serif Display",serif;
+}
+
+
+/* =========================
+   PASSWORD SCREEN
+========================= */
+
+#lockScreen{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+
+    display:grid;
+    place-items:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 15% 18%,#ffd9e7 0 7%,transparent 24%),
+    radial-gradient(circle at 85% 80%,#ffe7b8 0 6%,transparent 25%),
+    linear-gradient(135deg,#fffafc,#fff0f5 55%,#fff9ee);
+
+    transition:.7s;
+}
+
+#lockScreen:before,
+#lockScreen:after{
+    content:'♡';
+
+    position:absolute;
+
+    color:#e7a4b7;
+    opacity:.25;
+
+    font-size:180px;
+
+    animation:floatHeart 5s ease-in-out infinite;
+}
+
+#lockScreen:before{
+    left:-45px;
+    top:5%;
+}
+
+#lockScreen:after{
+    right:-35px;
+    bottom:2%;
+
+    animation-delay:1.4s;
+}
+
+@keyframes floatHeart{
+
+    50%{
+        transform:translateY(-22px) rotate(8deg);
+    }
+
+}
+
+
+/* PASSWORD CARD */
+
+.lock{
+    position:relative;
+
+    width:min(450px,92%);
+
+    padding:42px 30px 32px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid #f2d3dc;
+
+    border-radius:34px;
+
+    box-shadow:
+    0 30px 90px rgba(105,39,59,.18);
+
+    animation:cardIn .8s ease;
+}
+
+@keyframes cardIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+.lock:before{
+    content:'🐾';
+
+    position:absolute;
+
+    top:-22px;
+    right:28px;
+
+    font-size:42px;
+
+    transform:rotate(12deg);
+
+    filter:drop-shadow(0 5px 8px #7c2b4520);
+}
+
+.lock .paw{
+
+    width:95px;
+    height:95px;
+
+    margin:0 auto 14px;
+
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    font-size:48px;
+
+    background:
+    linear-gradient(145deg,#fff,#ffe6ee);
+
+    box-shadow:
+    0 12px 30px #a42e4c20;
+
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+
+    50%{
+        transform:translateY(-9px) rotate(4deg);
+    }
+
+}
+
+.lock .mini{
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#c07b8d;
+
+    font-weight:600;
+}
+
+.lock h1{
+
+    font-size:48px;
+
+    color:#a42e4c;
+
+    margin:5px 0 3px;
+}
+
+.lock .subtitle{
+
+    font-family:'DM Serif Display',serif;
+
+    font-size:21px;
+
+    color:#7f626b;
+
+    margin-bottom:8px;
+}
+
+.lock p{
+
+    color:#856b73;
+
+    margin-bottom:22px;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+
+/* PASSWORD INPUT */
+
+.passwordWrap{
+    position:relative;
+}
+
+#pass{
+
+    width:100%;
+
+    padding:16px 48px 16px 18px;
+
+    text-align:center;
+
+    letter-spacing:5px;
+
+    border:2px solid #f0d5dd;
+
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:17px;
+
+    background:#fffafd;
+
+    color:#8f2948;
+
+    transition:.25s;
+}
+
+#pass:focus{
+
+    border-color:#c65a78;
+
+    box-shadow:
+    0 0 0 5px #c65a7815;
+}
+
+.passwordIcon{
+
+    position:absolute;
+
+    right:16px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:20px;
+}
+
+.unlock{
+
+    width:100%;
+
+    margin-top:13px;
+
+    padding:15px;
+
+    border:0;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(135deg,#a42e4c,#c65370);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    box-shadow:
+    0 12px 25px #a42e4c25;
+
+    transition:.25s;
+}
+
+.unlock:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 16px 30px #a42e4c35;
+}
+
+.hint{
+
+    margin-top:13px!important;
+
+    margin-bottom:0!important;
+
+    font-size:12px!important;
+
+    color:#a37b86!important;
+}
+
+.err{
+
+    min-height:22px;
+
+    color:#c34b67;
+
+    font-size:13px;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:grid;
+
+    place-items:center;
+
+    text-align:center;
+
+    padding-top:90px;
+
+    position:relative;
+}
+
+.hero-inner{
+    max-width:850px;
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:9px 17px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    border:1px solid #efd7df;
+
+    color:#a42e4c;
+}
+
+.hero h1{
+
+    font-size:clamp(62px,10vw,110px);
+
+    line-height:.94;
+
+    color:#a42e4c;
+
+    margin:22px 0;
+}
+
+.hero h1 span{
+    color:#df9a46;
+}
+
+.hero p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#795e67;
+}
+
+.cta{
+
+    display:inline-block;
+
+    margin-top:26px;
+
+    padding:14px 25px;
+
+    border-radius:999px;
+
+    background:#a42e4c;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    box-shadow:
+    0 10px 25px #a42e4c22;
+
+    transition:.3s;
+}
+
+.cta:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:42px;
+}
+
+.title h2{
+
+    font-size:48px;
+
+    color:#922b49;
+}
+
+.title p{
+
+    color:#866d75;
+
+    margin-top:8px;
+}
+
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+}
+
+.photo{
+
+    background:white;
+
+    padding:12px;
+
+    border:1px solid #efdbe1;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 20px 50px #5a23340f;
+
+    transition:.35s;
+
+    transform:rotate(-1deg);
+}
+
+.photo:nth-child(even){
+    transform:rotate(1deg);
+}
+
+.photo:hover{
+
+    transform:
+    translateY(-8px)
+    rotate(0);
+}
+
+.photoImage{
+
+    width:100%;
+
+    height:500px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    background:#fff0f4;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.photoImage img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.photo:hover img{
+
+    transform:scale(1.035);
+}
+
+.photo p{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:20px;
+
+    padding:17px 7px 8px;
+}
+
+
+/* =========================
+   SISTER CARDS
+========================= */
+
+.sisterCards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.sCard{
+
+    background:#fff;
+
+    border:1px solid #efd8df;
+
+    border-radius:25px;
+
+    padding:30px 22px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px #5a23340d;
+
+    transition:.3s;
+}
+
+.sCard:hover{
+
+    transform:
+    translateY(-7px);
+}
+
+.sCard .emoji{
+
+    font-size:43px;
+}
+
+.sCard h3{
+
+    color:#9b3150;
+
+    margin:12px 0 8px;
+
+    font-size:21px;
+}
+
+.sCard p{
+
+    line-height:1.7;
+
+    color:#765f67;
+}
+
+
+/* =========================
+   BIRTHDAY BOX
+========================= */
+
+.birthdayBox{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:42px 28px;
+
+    border-radius:32px;
+
+    background:
+    linear-gradient(145deg,#fff,#fff0f4);
+
+    border:1px solid #efd2db;
+
+    box-shadow:
+    0 25px 60px #5b22330f;
+}
+
+.birthdayBox .cake{
+
+    font-size:75px;
+
+    animation:float 2.2s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+.birthdayBox h2{
+
+    font-size:43px;
+
+    color:#932947;
+
+    margin:8px 0;
+}
+
+.birthdayBox p{
+
+    line-height:1.8;
+
+    color:#765e67;
+}
+
+.birthdayBox button{
+
+    margin-top:20px;
+
+    border:0;
+
+    padding:13px 23px;
+
+    border-radius:999px;
+
+    background:#a42e4c;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   NICKNAMES
+========================= */
+
+.names{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    justify-content:center;
+}
+
+.name{
+
+    padding:13px 18px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    border:1px solid #efd7de;
+
+    color:#a12d4c;
+
+    box-shadow:
+    0 7px 20px #67263a0a;
+
+    transition:.3s;
+}
+
+.name:hover{
+
+    transform:
+    translateY(-4px)
+    rotate(-2deg);
+
+    background:#fff0f4;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+    max-width:830px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:42px;
+
+    border-radius:28px;
+
+    border:1px solid #efdce1;
+
+    box-shadow:
+    0 20px 60px #5a23340f;
+
+    line-height:1.9;
+}
+
+.letter h2{
+
+    font-size:44px;
+
+    color:#a52d4b;
+
+    margin-bottom:12px;
+}
+
+.sig{
+
+    font-family:"DM Serif Display";
+
+    font-size:28px;
+
+    color:#a52d4b;
+
+    margin-top:18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#94717a;
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    animation:fall linear forwards;
+
+    z-index:1200;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(540deg);
+
+        opacity:0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photoImage{
+        height:520px;
+    }
+
+    .sisterCards{
+        grid-template-columns:1fr;
+    }
+
+    .title h2{
+        font-size:40px;
+    }
+
+    .letter{
+        padding:28px;
+    }
+
+    .hero h1{
+        font-size:66px;
+    }
+
+    .lock{
+        padding:38px 22px 28px;
+    }
+
+    .lock h1{
+        font-size:42px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     PASSWORD SCREEN
+========================= -->
+
+<div id="lockScreen">
+
+    <div class="lock">
+
+        <div class="paw">
+            🎀🐾
+        </div>
+
+        <div class="mini">
+            A Secret Birthday World
+        </div>
+
+        <h1>
+            For Afii 💗
+        </h1>
+
+        <div class="subtitle">
+            Meri pyari Chuchu • BillU 🐾
+        </div>
+
+        <p>
+            Ye little surprise sirf birthday girl ke liye hai. 
+            <br>
+            Pehle secret password dalo,
+            phir tumhari birthday duniya unlock hogi ✨
+        </p>
+
+
+        <div class="passwordWrap">
+
+            <input
+                id="pass"
+                type="password"
+                maxlength="6"
+                placeholder="••••••"
+                autocomplete="off"
+            >
+
+            <span class="passwordIcon">
+                🔐
+            </span>
+
+        </div>
+
+
+        <button
+            class="unlock"
+            onclick="unlock()"
+        >
+            Unlock Afii's Birthday 🎂
+        </button>
+
+
+        <p class="hint">
+            Hint: tumhara sab se cute nickname 🐾
+        </p>
+
+
+        <div
+            class="err"
+            id="err">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="badge">
+            A little birthday world for my sister 🎀
+        </div>
+
+        <h1>
+            Happy Birthday
+            <br>
+            <span>Afii</span> 🎂
+        </h1>
+
+        <p>
+
+            Meri pyari Chuchu, meri BillU 🐾 —
+            tum sirf meri behen nahi,
+            meri favorite trouble-maker,
+            meri hasi ki wajah aur ghar ki cutest
+            personality ho. 💗
+
+        </p>
+
+        <a
+            class="cta"
+            href="#memories">
+
+            See Afii's Memories ✨
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section id="memories">
+
+    <div class="title">
+
+        <h2>
+            Our Favorite Afii Moments 📸
+        </h2>
+
+        <p>
+            Beautiful pictures of the birthday girl 💗
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic6.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                Our beautiful birthday girl. 🌷
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic4.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                Chuchu looking extra pretty as always. ✨
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic5.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                One of those pictures that deserves a frame. 💗
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic3.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                BillU 🐾 being effortlessly cute.
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic2.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                Birthday girl energy! 🎀
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic1.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                Pretty, confident and completely Afii. 💕
+            </p>
+
+        </div>
+
+
+
+        <div class="photo">
+
+            <div class="photoImage">
+
+                <img
+                    src="pic7.jpeg"
+                    alt="Afii">
+
+            </div>
+
+            <p>
+                A memory to keep forever. 🌸
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY AFII IS SPECIAL
+========================= -->
+
+<section>
+
+    <div class="title">
+
+        <h2>
+            Why Afii Is Special 💌
+        </h2>
+
+        <p>
+            Because every little thing about you
+            makes our home happier.
+        </p>
+
+    </div>
+
+
+    <div class="sisterCards">
+
+
+        <div class="sCard">
+
+            <div class="emoji">
+                😂
+            </div>
+
+            <h3>
+                Certified Pagli
+            </h3>
+
+            <p>
+                Tumhare random jokes aur pagalpan ke
+                baghair ghar bilkul boring hota.
+            </p>
+
+        </div>
+
+
+
+        <div class="sCard">
+
+            <div class="emoji">
+                🐾
+            </div>
+
+            <h3>
+                Our BillU
+            </h3>
+
+            <p>
+                Ye nickname tumse zyada kis par
+                suit kar sakta hai?
+                Bilkul kisi par nahi.
+            </p>
+
+        </div>
+
+
+
+        <div class="sCard">
+
+            <div class="emoji">
+                🌷
+            </div>
+
+            <h3>
+                Sweet Sister
+            </h3>
+
+            <p>
+                Tumhari caring aur cute nature
+                tumhe sab se alag banati hai.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BIRTHDAY WISH
+========================= -->
+
+<section>
+
+    <div class="birthdayBox">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <h2>
+            Make A Birthday Wish ✨
+        </h2>
+
+        <p>
+            Eyes close karo,
+            wish maango aur candles blow
+            karne ka pretend karo. 😂💗
+        </p>
+
+        <button onclick="celebrate()">
+
+            Blow Candles 🎂
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NICKNAMES
+========================= -->
+
+<section>
+
+    <div class="title">
+
+        <h2>
+            Nicknames For Our Chuchu 🐾
+        </h2>
+
+        <p>
+            Ek naam se kaam thori chalna tha. 😂
+        </p>
+
+    </div>
+
+
+    <div class="names">
+
+        <span class="name">
+            Afii 💗
+        </span>
+
+        <span class="name">
+            Chuchu 🐾
+        </span>
+
+        <span class="name">
+            BillU 🐾
+        </span>
+
+        <span class="name">
+            Pagli 😂
+        </span>
+
+        <span class="name">
+            Cutie 🌷
+        </span>
+
+        <span class="name">
+            Princess 👑
+        </span>
+
+        <span class="name">
+            Birthday Girl 🎂
+        </span>
+
+        <span class="name">
+            Drama Queen 👸
+        </span>
+
+        <span class="name">
+            Our Favorite 💕
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section>
+
+    <div class="letter">
+
+        <h2>
+            For My Pyari Behen, Afii 💗
+        </h2>
+
+        <p>
+
+            Happy Birthday meri pyari behen! 🎂❤️
+
+            Allah tumhari zindagi ko hamesha
+            khushiyon, kamyabi, sehat aur
+            beautiful moments se bhar de.
+
+            Tumhari har achi dua qabool ho
+            aur tum hamesha isi tarah hansti,
+            muskurati aur sab ko khush karti raho.
+
+            <br><br>
+
+            Chuchu, tumhari choti choti shararatein,
+            tumhara pagalpan aur tumhari cute si
+            personality hamari family ko aur
+            special banati hai.
+
+            Aur haan BillU 🐾 —
+            birthday hai is liye aaj tumhare
+            saare nakhre maaf hain. 😂💗
+
+            <br><br>
+
+            Stay happy, stay blessed and never
+            stop being the amazing girl you are.
+
+            Love you loads,
+            meri pyari behen. 🌷
+
+        </p>
+
+
+        <div class="sig">
+            Happy Birthday, Afii! 🎀❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    Made with lots of sisterly love for
+    Afii • Chuchu • BillU 🐾💗
+
+</footer>
+
+
+</main>
+
+
+
+<script>
+
+/* =========================
+   PASSWORD
+========================= */
+
+const PASS = "chuchu";
+
+
+function unlock(){
+
+    const input =
+        document.getElementById("pass");
+
+    const value =
+        input.value.trim().toLowerCase();
+
+
+    if(value === PASS){
+
+        const screen =
+            document.getElementById("lockScreen");
+
+
+        screen.style.opacity = "0";
+
+
+        setTimeout(function(){
+
+            screen.style.display = "none";
+
+        },700);
+
+
+        celebrate();
+
+    }
+
+    else{
+
+        document.getElementById("err")
+        .textContent =
+        "Oops! Chuchu, password galat hai 😭🐾";
+
+    }
+
+}
+
+
+/* ENTER KEY */
+
+document
+.getElementById("pass")
+.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Enter"){
+
+            unlock();
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   BIRTHDAY CONFETTI
+========================= */
+
+function celebrate(){
+
+    const items = [
+        "💗",
+        "🎀",
+        "🌸",
+        "✨",
+        "🎂",
+        "🐾",
+        "💕",
+        "🥳"
+    ];
+
+
+    for(let i=0;i<55;i++){
+
+        const x =
+            document.createElement("div");
+
+
+        x.className =
+            "confetti";
+
+
+        x.textContent =
+            items[
+                Math.floor(
+                    Math.random()*items.length
+                )
+            ];
+
+
+        x.style.left =
+            Math.random()*100 + "vw";
+
+
+        x.style.animationDuration =
+            (2.5 + Math.random()*3) + "s";
+
+
+        x.style.fontSize =
+            (15 + Math.random()*18) + "px";
+
+
+        document.body.appendChild(x);
+
+
+        setTimeout(function(){
+
+            x.remove();
+
+        },6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
